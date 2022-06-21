@@ -4,13 +4,25 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
+
+
 @Component
 public class Event {
+    private Long id;
+
     private String name;
 
     private String description;
 
     private LocalDateTime dateTime;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -40,4 +52,7 @@ public class Event {
     public String toString() {
         return name + ":\n" + description + "\n" + dateTime;
     }
+
+
+
 }
